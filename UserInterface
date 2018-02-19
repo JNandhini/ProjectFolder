@@ -1613,7 +1613,7 @@ void game_info(vector<GameData> gameinfo)
 	
 }
 
-void Chance()//vector<GameData> gameinfo)
+void Chance()
 {
 
 	string Information;
@@ -1621,8 +1621,7 @@ void Chance()//vector<GameData> gameinfo)
 	vector<GameData> details;
 	string value;
 	string Turn;
-	//Turn = gameinfo[0].get_chance();
-
+	
 	Information = UserRequest::receive();
 		strcpy_s(option, Information.c_str());
 
