@@ -517,7 +517,7 @@
 				LabelControl(label8, Name, Text, 100,400, 130, 35);
 				this->label8->Font = (gcnew System::Drawing::Font(L"Times New Roman", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
-							// 
+					// 
 				// textBox4
 				// 
 				if (Turn == "1")
