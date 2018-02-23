@@ -1,0 +1,965 @@
+	#pragma once
+	#include <msclr\marshal_cppstd.h>
+	//#using <mscorlib.dll>
+	#include"UserDesign.h"
+	#include<string>
+	#include<iostream>
+	using namespace std;
+	namespace Hangman 
+	{
+	using namespace System;
+	using namespace System::ComponentModel;
+	using namespace System::Collections;
+	using namespace System::Windows::Forms;
+	using namespace System::Data;
+	using namespace System::Drawing;
+	using namespace System::Runtime::InteropServices;
+	/// <summary>
+	/// Summary for FormDesign
+	/// </summary>
+	public ref class FormDesign : public System::Windows::Forms::Form
+	{
+	public:
+	FormDesign(void)
+	{
+	this->MaximizeBox = false;
+	this->MinimizeBox = false;
+	InitializeComponent();
+	}
+	protected:
+	/// <summary>
+	/// Clean up any resources being used.
+	/// </summary>
+	~FormDesign()
+	{
+	if (components)
+	{
+		delete components;
+	}
+	}
+
+	protected:
+	private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::Button^  button2;
+	private: System::Windows::Forms::TextBox^  textBox1;
+	private: System::Windows::Forms::Label^  label1;
+	private: System::Windows::Forms::Label^  label2;
+	private: System::Windows::Forms::Button^  Button4;
+	private: System::Windows::Forms::Button^  button5;
+	private: System::Windows::Forms::Label^  label3;
+	private: System::Windows::Forms::Label^  label4;
+	private: System::Windows::Forms::Label^  label5;
+	private: System::Windows::Forms::RadioButton^  radioButton4;
+	private: System::Windows::Forms::RadioButton^  radioButton5;
+	private: System::Windows::Forms::RadioButton^  radioButton6;
+	private: System::Windows::Forms::Button^  button6;
+	private: System::Windows::Forms::Button^  button7;
+	private: System::Windows::Forms::RadioButton^  radioButton7;
+	private: System::Windows::Forms::RadioButton^  radioButton8;
+	private: System::Windows::Forms::RadioButton^  radioButton9;
+	private: System::Windows::Forms::RadioButton^  radioButton10;
+	private: System::Windows::Forms::Button^  button8;
+	private: System::Windows::Forms::Label^  label6;
+	private: System::Windows::Forms::Label^  label7;
+	private: System::Windows::Forms::TextBox^  textBox2;
+	private: System::Windows::Forms::TextBox^  textBox3;
+	private: System::Windows::Forms::Label^  label8;
+	private: System::Windows::Forms::TextBox^  textBox4;
+	private: System::Windows::Forms::ComboBox^  comboBox1;
+	private: System::Windows::Forms::Label^  label9;
+	private: System::Windows::Forms::TextBox^  textBox5;
+	private: System::Windows::Forms::ListBox^  listBox1;
+	private: System::Windows::Forms::Button^  Button9;
+	private: System::Windows::Forms::ComboBox^  comboBox2;
+	private: System::Windows::Forms::Button^  Button3;
+	private: System::Windows::Forms::PictureBox^  pictureBox1;
+	public: System::Windows::Forms::PictureBox^  pictureBox3;
+	public: System::Windows::Forms::PictureBox^  pictureBox4;
+	public: System::Windows::Forms::PictureBox^  pictureBox2;
+	public: System::Windows::Forms::PictureBox^  pictureBox5;
+	public: System::Windows::Forms::PictureBox^  pictureBox6;
+	public: System::Windows::Forms::PictureBox^  pictureBox7;
+	private: System::Windows::Forms::TextBox^  textBox6;
+	/// <summary>
+	/// Required designer variable.
+	/// </summary>
+	System::ComponentModel::Container ^components;
+#pragma region Windows Form Designer generated code
+	/// <summary>
+	/// Required method for Designer support - do not modify
+	/// the contents of this method with the code editor.
+	/// </summary>
+	public:
+	void InitializeComponent()
+	{
+		this->button1 = (gcnew System::Windows::Forms::Button());
+		this->button2 = (gcnew System::Windows::Forms::Button());
+		this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+		this->label1 = (gcnew System::Windows::Forms::Label());
+		this->label2 = (gcnew System::Windows::Forms::Label());
+		this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+		(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+		this->SuspendLayout();
+		// 
+		// button1
+		// 
+		this->button1->Location = System::Drawing::Point(0, 0);
+		this->button1->Name = L"button1";
+		this->button1->Size = System::Drawing::Size(75, 23);
+		this->button1->TabIndex = 4;
+		this->button1->Click += gcnew System::EventHandler(this, &FormDesign::button1_Click);
+		// 
+		// button2
+		// 
+		this->button2->FlatAppearance->BorderColor = System::Drawing::Color::White;
+		this->button2->FlatAppearance->MouseDownBackColor = System::Drawing::Color::White;
+		this->button2->FlatAppearance->MouseOverBackColor = System::Drawing::Color::White;
+		this->button2->Location = System::Drawing::Point(0, 0);
+		this->button2->Name = L"button2";
+		this->button2->Size = System::Drawing::Size(75, 23);
+		this->button2->TabIndex = 3;
+		this->button2->Click += gcnew System::EventHandler(this, &FormDesign::button2_Click);
+		// 
+		// textBox1
+		// 
+		this->textBox1->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+			static_cast<System::Byte>(0)));
+		this->textBox1->Location = System::Drawing::Point(0, 0);
+		this->textBox1->MaxLength = 49;
+		this->textBox1->Name = L"textBox1";
+		this->textBox1->Size = System::Drawing::Size(100, 29);
+		this->textBox1->TabIndex = 1;
+		this->textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+		// 
+		// label1
+		// 
+		this->label1->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			static_cast<System::Byte>(0)));
+		this->label1->Location = System::Drawing::Point(0, 0);
+		this->label1->Name = L"label1";
+		this->label1->Size = System::Drawing::Size(100, 23);
+		this->label1->TabIndex = 2;
+		// 
+		// label2
+		// 
+		this->label2->Font = (gcnew System::Drawing::Font(L"Times New Roman", 27.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			static_cast<System::Byte>(0)));
+		this->label2->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
+		this->label2->Location = System::Drawing::Point(0, 0);
+		this->label2->Name = L"label2";
+		this->label2->Size = System::Drawing::Size(100, 23);
+		this->label2->TabIndex = 0;
+		this->label2->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+		// 
+		// pictureBox1
+		// 
+		this->pictureBox1->Location = System::Drawing::Point(539, 138);
+		this->pictureBox1->Name = L"pictureBox1";
+		this->pictureBox1->Size = System::Drawing::Size(264, 378);
+		this->pictureBox1->TabIndex = 6;
+		this->pictureBox1->TabStop = false;
+		// 
+		// FormDesign
+		// 
+		this->AutoScaleDimensions = System::Drawing::SizeF(7, 13);
+		this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+		this->BackColor = System::Drawing::SystemColors::Window;
+		this->ClientSize = System::Drawing::Size(984, 562);
+		this->Controls->Add(this->label2);
+		this->Controls->Add(this->textBox1);
+		this->Controls->Add(this->label1);
+		this->Controls->Add(this->button2);
+		this->Controls->Add(this->button1);
+		this->Controls->Add(this->pictureBox1);
+		this->Font = (gcnew System::Drawing::Font(L"Times New Roman", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			static_cast<System::Byte>(0)));
+		this->ForeColor = System::Drawing::Color::Black;
+		this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+		this->MaximizeBox = false;
+		this->MinimizeBox = false;
+		this->Name = L"FormDesign";
+		this->Load += gcnew System::EventHandler(this, &FormDesign::FormDesign_Load);
+		(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
+		this->ResumeLayout(false);
+		this->PerformLayout();
+
+	}
+	public:
+void categories(vector<GameData> Categories)
+{
+	vector<string>Category;
+	this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+	this->button5 = (gcnew System::Windows::Forms::Button());
+	this->label1 = (gcnew System::Windows::Forms::Label());
+	this->label2 = (gcnew System::Windows::Forms::Label());
+	this->label3 = (gcnew System::Windows::Forms::Label());
+	this->label4 = (gcnew System::Windows::Forms::Label());
+	this->SuspendLayout();
+	this->comboBox1->Font = (gcnew System::Drawing::Font(L"Times New Roman", 20.25F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+		System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+	this->comboBox1->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+	this->comboBox1->FormattingEnabled = true;
+	int Size = 0;
+	int iterate = 0;
+	Category = Categories[0].get_gameoption();
+	for (iterate = 0; iterate < Category.size(); iterate++)
+	{
+		System::String^ Words = gcnew String(Category[iterate].c_str());
+		this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(1) { Words });
+	}
+	this->comboBox1->Location = System::Drawing::Point(150, 250);
+	this->comboBox1->Name = L"comboBox1";
+	this->comboBox1->Size = System::Drawing::Size(205, 39);
+	this->comboBox1->TabIndex = 32;
+	String^ Name = "button5";
+	String^ Text = "Ok";
+	set_button_properties(button5, Name, Text, 140, 450, 105, 36);
+	this->button5->Click += gcnew System::EventHandler(this, &FormDesign::button5_Click);
+	Name = "label3";
+	Text = "Select Categories";
+	set_label_properties(label3, Name, Text, 150, 150, 314, 32);
+	this->label3->Font = (gcnew System::Drawing::Font(L"Times New Roman", 21.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+		static_cast<System::Byte>(0)));
+	Name = "label4";
+	Text = "Categories";
+	set_label_properties(label4, Name, Text, 150, 200, 146, 30);
+	this->label4->Font = (gcnew System::Drawing::Font(L"Times New Roman", 20.25F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+		System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+	image();
+	this->Controls->Add(this->comboBox1);
+	this->Controls->Add(this->button5);
+	this->Controls->Add(this->label4);
+	this->Controls->Add(this->label3);
+}
+	public:
+void levels()
+{
+	this->label5 = (gcnew System::Windows::Forms::Label());
+	this->radioButton4 = (gcnew System::Windows::Forms::RadioButton());
+	this->radioButton5 = (gcnew System::Windows::Forms::RadioButton());
+	this->radioButton6 = (gcnew System::Windows::Forms::RadioButton());
+	this->button6 = (gcnew System::Windows::Forms::Button());
+	this->Button9 = (gcnew System::Windows::Forms::Button());
+	Name = "label5";
+	Text = "Levels";
+	set_label_properties(label1, Name, Text, 150, 100, 117, 37);
+
+	this->label5->Font = (gcnew System::Drawing::Font(L"Times New Roman", 21.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+		static_cast<System::Byte>(0)));
+	image();
+	String^ Name = "radioButton4";
+	String^	Text = "Easy";
+	set_radiobutton_properties(radioButton4, Name, Text, 150, 150, 90, 35);	
+	Name = "radioButton5";
+	Text = "Medium";
+	set_radiobutton_properties(radioButton5, Name, Text, 150, 200, 130, 35);
+	Name = "radioButton6";
+	Text = "Hard";
+	set_radiobutton_properties(radioButton6, Name, Text, 150, 250, 130, 35);
+	Name = "Button9";
+	Text = "Back";
+	set_button_properties(Button9, Name, Text, 140, 450, 105, 36);
+	this->Button9->Click += gcnew System::EventHandler(this, &FormDesign::Button9_Click);
+	Name = "button6";
+	Text = "Ok";
+	set_button_properties(button6, Name, Text, 140, 450, 105, 36);
+	this->button6->Click += gcnew System::EventHandler(this, &FormDesign::button6_Click);
+	this->Controls->Add(this->label5);
+	this->Controls->Add(this->button6);
+	this->Controls->Add(this->Button9);
+	this->Controls->Add(this->pictureBox1);
+	this->Controls->Add(this->radioButton6);
+	this->Controls->Add(this->radioButton5);
+	this->Controls->Add(this->radioButton4);
+}
+public:
+void instructions()
+{
+
+	this->Button4 = (gcnew System::Windows::Forms::Button());
+
+	this->listBox1 = (gcnew System::Windows::Forms::ListBox());
+	this->listBox1->Font = (gcnew System::Drawing::Font(L"Times New Roman", 24.75F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+		static_cast<System::Byte>(0)));
+	this->listBox1->FormattingEnabled = true;
+	this->listBox1->ItemHeight = 43;
+	this->listBox1->Items->AddRange(gcnew cli::array< System::Object^  >(9) {
+		L"", L"The hangman game instructions", L"a.The player can either create new game or join with existing game.",
+			L"b.Total chances given to the players are 6.", L"c.The player can enter only one letter at a time.", L"d for every wrong guesses the hangman inage will be loaded", L"e.If chances are over the player will lose the game", L"f.For correct guesses the chances will not be reduced.", L"g.By Guessing the word correctly player win the game "
+	});
+	this->listBox1->Location = System::Drawing::Point(10, 10);
+	this->listBox1->Name = L"listBox1";
+	this->listBox1->Size = System::Drawing::Size(990, 500);
+	this->listBox1->TabIndex = 33;
+	this->Button4->BackColor = System::Drawing::SystemColors::ButtonShadow;
+	String^ Name = "Button4";
+	String^ Text = "Back";
+	set_button_properties(Button4, Name, Text, 280, 450, 105, 36);
+	this->Button4->Click += gcnew System::EventHandler(this, &FormDesign::Button4_Click);
+	this->Controls->Add(this->Button4);
+	this->Controls->Add(this->listBox1);
+}
+	public:
+		void game(vector<GameData> GameInfo)
+		{
+			vector<string>word;
+			string Id = GameInfo[0].get_usergameid();
+			string Word = GameInfo[0].get_words();
+			string Chance = GameInfo[0].get_remainingguess();
+			string Guess = GameInfo[0].get_wrongguess();
+			string Result = GameInfo[0].get_result();
+			string Turn = GameInfo[0].get_chance();
+			System::String^ Words = gcnew String(Word.c_str());
+			System::String^ GameId = gcnew String(Id.c_str());
+			System::String^ WrongGuess = gcnew String(Guess.c_str());
+			System::String^ Chances = gcnew String(Chance.c_str());
+			System::String^ Value = gcnew String(Result.c_str());
+			int LeftChances = atoi(Chance.c_str());
+			if (Result == PLAYING)
+			{
+				this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+				this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+				this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
+				this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
+				this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
+				this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
+				this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
+				this->pictureBox7 = (gcnew System::Windows::Forms::PictureBox());
+				(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+				(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
+				(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
+				(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
+				(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
+				(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
+				(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->BeginInit();
+				System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(FormDesign::typeid));
+				this->label7 = (gcnew System::Windows::Forms::Label());
+				this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+				this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+				this->label8 = (gcnew System::Windows::Forms::Label());
+				this->label6 = (gcnew System::Windows::Forms::Label());
+				this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+				this->label9 = (gcnew System::Windows::Forms::Label());
+				this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+
+				
+
+				Name = "label6";
+				Text = "Guess word";
+				set_label_properties(label6, Name, Text, 100, 200, 204, 36);
+				this->label6->Font = (gcnew System::Drawing::Font(L"Times New Roman", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+				Name = "label7";
+				Text = "Left Chances";
+				set_label_properties(label7, Name, Text, 100, 300, 164, 31);
+				this->label7->Font = (gcnew System::Drawing::Font(L"Times New Roman", 20.25F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+					System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+				Name = "label1";
+				Text = "Wrong Guess";
+				set_label_properties(label1, Name, Text, 100, 500, 204, 36);
+				this->label1->Font = (gcnew System::Drawing::Font(L"Times New Roman", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,static_cast<System::Byte>(0)));
+				Name = "label9";
+				Text = "GameId";
+				set_label_properties(label9, Name, Text, 100, 110, 130, 30);				// 
+				this->label9->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+
+				Name = "textBox2";
+				Text = Chances;
+				set_textbox_properties(textBox2, Name, Text, 300, 300, 84,58 );
+				this->textBox2->Font = (gcnew System::Drawing::Font(L"Times New Roman", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+					static_cast<System::Byte>(0)));
+				this->textBox2->ReadOnly = true;
+				this->textBox2->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+				Name = "textBox3";
+				Text = Words;
+				set_textbox_properties(textBox3, Name, Text, 300, 200, 400, 52);
+				this->textBox3->Font = (gcnew System::Drawing::Font(L"Times New Roman", 12.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+					static_cast<System::Byte>(0)));
+				this->textBox3->ReadOnly = true;
+				Name = "label8";
+				Text = "Type here";
+				set_label_properties(label8, Name, Text, 100,400, 130, 35);
+				this->label8->Font = (gcnew System::Drawing::Font(L"Times New Roman", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+					static_cast<System::Byte>(0)));
+				if (Turn == "1")
+				{
+					int number = 1;
+					//
+					Name = "textBox4";
+					Text = "";
+					set_textbox_properties(textBox4, Name, Text, 300, 400, 232, 50);
+					this->textBox4->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+						static_cast<System::Byte>(0)));
+					this->textBox4->MaxLength = number;		
+					this->textBox4->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &FormDesign::textBox4_KeyPress);
+				}
+				else if (Turn == "0")
+				{
+					Name = "textBox4";
+					Text = "Not Your Turn";
+					set_textbox_properties(textBox4, Name, Text, 300, 400, 232, 50);
+					this->textBox4->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+						static_cast<System::Byte>(0)));
+					this->textBox4->ReadOnly = true;
+					this->textBox4->Enter += gcnew System::EventHandler(this, &FormDesign::textBox4_Entered);
+				//	this->textBox4->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &FormDesign::textBox4_MouseMove);
+				}				
+				Name = "textBox5";
+				Text = GameId;
+				set_textbox_properties(textBox5, Name, Text, 300,110, 90, 40  );
+				this->textBox5->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+					static_cast<System::Byte>(0)));
+				this->textBox5->ReadOnly = true;
+				Name = "textBox6";
+				Text = WrongGuess;
+				set_textbox_properties(textBox6, Name, Text, 300, 500, 175,42);
+				this->textBox6->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+					static_cast<System::Byte>(0)));
+				this->textBox6->ReadOnly = true;
+				String^ name;
+				String^ imagePath;
+				if (LeftChances == 6)
+				{
+					image();
+				}			
+				else if (LeftChances == 5)
+				{
+					
+					 name = "pictureBox2";
+					 imagePath = "stage2.png";
+					set_picture_properties_properties(pictureBox2, name, imagePath, 750, 170, 270, 370);
+
+				}
+				else if (LeftChances == 4)
+				{
+				    name = "pictureBox3";
+				    imagePath = "stage3.png";
+					set_picture_properties_properties(pictureBox3, name, imagePath, 750, 170, 270, 370);
+				}
+				else if (LeftChances == 3)
+				{
+					name = "pictureBox4";
+					imagePath = "stage4.png";
+					set_picture_properties_properties(pictureBox4, name, imagePath, 750, 170, 270, 370);
+				}
+				else if (LeftChances == 2)
+				{
+ 
+					name = "pictureBox5";
+					imagePath = "stage5.png";
+					set_picture_properties_properties(pictureBox5, name, imagePath, 750, 170, 270, 370);
+				}
+				else if (LeftChances == 1)
+				{
+					name = "pictureBox6";
+					imagePath = "stage6.png";
+					set_picture_properties_properties(pictureBox6, name, imagePath, 750, 170, 270, 370);
+				}
+				else  if (LeftChances == 0)
+				{
+					 name = "pictureBox7";
+					 imagePath = "stage7.png";
+					set_picture_properties_properties(pictureBox7, name, imagePath, 750, 170, 270, 370);
+				}
+				this->Controls->Add(this->textBox4);
+				this->Controls->Add(this->label8);
+				this->Controls->Add(this->textBox3);
+				this->Controls->Add(this->label6);
+				this->KeyPreview = true;
+				this->Controls->Add(this->textBox2); 
+				this->Controls->Add(this->label7);
+				this->Controls->Add(this->textBox5);
+				this->Controls->Add(this->label9);
+				this->Controls->Add(this->textBox6);
+				this->Controls->Add(this->label1);
+				this->Controls->Add(this->pictureBox1);
+				this->Controls->Add(this->pictureBox2);
+				this->Controls->Add(this->pictureBox7);
+				this->Controls->Add(this->pictureBox6);
+				this->Controls->Add(this->pictureBox5);
+				this->Controls->Add(this->pictureBox4);
+				this->Controls->Add(this->pictureBox3);
+				this->Load += gcnew System::EventHandler(this, &FormDesign::FormDesign_Load);
+				(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
+				(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
+				(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
+				(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
+				(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->EndInit();
+				(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->EndInit();
+				}
+			else if (Result == WIN || Result == LOSE)
+			{
+				this->Controls->Clear();
+				result(Value, Words);
+			}
+}
+void set_textbox_properties(TextBox^ textBox, String^ Name, String^ Text, int LocationX, int LocationY, int Height, int Width)
+{
+	textBox->Font = (gcnew System::Drawing::Font(L"Times New Roman", 12.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+		static_cast<System::Byte>(0)));
+	textBox->Location = System::Drawing::Point(LocationX, LocationY);
+	textBox->Multiline = true;
+	textBox->Name = Name;
+	textBox->Text = Text;
+	textBox->Size = System::Drawing::Size(Height, Width);
+	textBox->TabIndex = 25;
+			
+}
+void set_picture_properties_properties(PictureBox^ control, String^ Name, String^ ImagePath, int LocationX, int LocationY, int Height, int Width)
+{
+	control->Image = Image::FromFile(String::Concat(ImagePath));
+	control->Location = System::Drawing::Point(LocationX, LocationY);
+	control->Name = Name;
+	control->Size = System::Drawing::Size(Height, Width);
+	control->TabIndex = 12;
+	control->TabStop = false;
+			
+}
+void set_label_properties(Label^ label, String^ Name, String^ Text, int LocationX, int LocationY, int Height, int Width)
+{
+	label->BackColor = System::Drawing::SystemColors::Window;
+	label->AutoSize = true;
+	label->Location = System::Drawing::Point(LocationX, LocationY);
+	label->Name = Name;
+	label->Size = System::Drawing::Size(Height, Width);
+	label->TabIndex = 32;
+	label->Text = Text;
+}
+void image()
+{	
+	this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+	System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(FormDesign::typeid));
+	(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+	this->SuspendLayout();
+	String^ name = "pictureBox1";
+	String^ imagePath = "stage2.png";
+	set_picture_properties_properties(pictureBox1, name, imagePath, 750, 170, 270, 370);
+}
+public:
+void display()
+{
+	UserRequest::server_connection();
+	this->radioButton7 = (gcnew System::Windows::Forms::RadioButton());
+	this->radioButton8 = (gcnew System::Windows::Forms::RadioButton());
+	this->button2 = (gcnew System::Windows::Forms::Button());
+	this->button7 = (gcnew System::Windows::Forms::Button());
+ 	String^ Name = "radioButton7";
+	String^ Text = "Play";
+	set_radiobutton_properties(radioButton7, Name, Text, 150, 150, 90, 35);
+	Name = "radioButton8";
+	Text = "Instructions";
+	set_radiobutton_properties(radioButton8, Name, Text, 150, 200, 170, 35);
+	 Name = "button7";
+	 Text = "Next";
+	set_button_properties(button7, Name, Text, 140, 450, 105, 36);
+	this->button7->Click += gcnew System::EventHandler(this, &FormDesign::button7_Click);
+	Name = "button2";
+	Text = "Exit";
+	set_button_properties(button2, Name, Text, 280, 450, 105, 36);
+	this->button2->Click += gcnew System::EventHandler(this, &FormDesign::button2_Click);
+	image();
+	this->Controls->Add(this->button7);
+	this->Controls->Add(this->radioButton7);
+	this->Controls->Add(this->button2);
+	this->Controls->Add(this->radioButton8);
+	this->Controls->Add(this->pictureBox1);
+}
+public:
+void choice()
+{
+	this->radioButton9 = (gcnew System::Windows::Forms::RadioButton());
+	this->radioButton10 = (gcnew System::Windows::Forms::RadioButton());
+	this->button8 = (gcnew System::Windows::Forms::Button());
+	this->Button4 = (gcnew System::Windows::Forms::Button());
+	String^ Name = "radioButton9";
+	String^ Text = "Create";
+	set_radiobutton_properties(radioButton9, Name, Text, 150, 150, 110, 35);
+	Name = "radioButton10";
+   Text = "Join";
+	set_radiobutton_properties(radioButton10, Name, Text, 150, 200, 110, 35);
+	Name = "button8";
+	Text = "Ok";
+	set_button_properties(button8, Name, Text, 140, 450, 105, 36);
+	this->button8->Click += gcnew System::EventHandler(this, &FormDesign::button8_Click);
+	this->Button4->FlatAppearance->BorderColor = System::Drawing::Color::White;
+	this->Button4->FlatAppearance->MouseDownBackColor = System::Drawing::Color::White;
+	this->Button4->FlatAppearance->MouseOverBackColor = System::Drawing::Color::White;
+	Name = "Button4";
+	Text = "Back";
+	set_button_properties(Button4, Name, Text, 280, 450, 105, 36);
+	this->Button4->Click += gcnew System::EventHandler(this, &FormDesign::Button4_Click);
+	image();
+	this->Controls->Add(this->button8);
+	this->Controls->Add(this->Button4);
+	this->Controls->Add(this->radioButton9);
+	this->Controls->Add(this->radioButton10);
+	this->Controls->Add(this->pictureBox1);	
+}
+void set_radiobutton_properties(RadioButton^ radioButton, String^ Name, String^ Text, int LocationX, int LocationY, int Height, int Width)
+{
+	radioButton->AutoSize = true;
+	radioButton->Font = (gcnew System::Drawing::Font(L"Times New Roman", 20.25F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+	System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+	radioButton->Location = System::Drawing::Point(LocationX, LocationY);
+	radioButton->Name = Name;
+	radioButton->Size = System::Drawing::Size(Height, Width);
+	radioButton->TabIndex = 19;
+	radioButton->TabStop = true;
+	radioButton->Text = Text;
+	radioButton->UseVisualStyleBackColor = true;
+}
+	// 
+void result(String^ Result,String^Words)
+{
+	this->Controls->Clear();
+	this->button2 = (gcnew System::Windows::Forms::Button());
+	this->Button4 = (gcnew System::Windows::Forms::Button());
+	if (Result == WIN)
+	{
+		String^ Name = "label1";
+		String^ Text = "You Win";
+		set_label_properties(label1, Name, Text, 300,200, 390, 110);
+		this->label1->Font = (gcnew System::Drawing::Font(L"Times New Roman", 72, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+		System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+	}
+	else if(Result== LOSE)
+	{
+		Name = "label1";
+		Text = "You Lose";
+		set_label_properties(label1, Name, Text, 300, 200, 390, 110);
+		this->label1->Font = (gcnew System::Drawing::Font(L"Times New Roman", 72, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+	}
+	 Name = "label5";
+	 Text = "Word is:";
+	set_label_properties(label5, Name, Text, 150, 100, 117, 37);	this->label5->AutoSize = true;
+	this->label5->Font = (gcnew System::Drawing::Font(L"Times New Roman", 21.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+		static_cast<System::Byte>(0)));
+	Name = "label6";
+	Text = Words;
+	set_label_properties(label6, Name, Text, 300, 100, 117, 37);
+	this->label6->Font = (gcnew System::Drawing::Font(L"Times New Roman", 21.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,static_cast<System::Byte>(0)));
+	this->button2->FlatAppearance->BorderColor = System::Drawing::Color::White;
+	this->button2->FlatAppearance->MouseDownBackColor = System::Drawing::Color::White;
+	this->button2->FlatAppearance->MouseOverBackColor = System::Drawing::Color::White;
+	Name = "button2";
+	Text = "Exit";
+	set_button_properties(button2, Name, Text, 280, 450, 105, 36);
+	this->button2->Click += gcnew System::EventHandler(this, &FormDesign::button2_Click);
+	Name = "Button4";
+	Text = "New Game";
+	set_button_properties(Button4, Name, Text, 140, 450, 105, 36);
+	this->Button4->Click += gcnew System::EventHandler(this, &FormDesign::Button4_Click);
+	this->Controls->Add(this->label1);
+	this->Controls->Add(this->label5);
+	this->Controls->Add(this->label6);
+	this->Controls->Add(this->button2);
+	this->Controls->Add(this->Button4);
+}	
+void game_id(vector<GameData> GameId)
+{
+	int Iterate = 0;
+	vector<string> Word;
+	Word = GameId[0].get_gameid();
+	System::String^ Words = gcnew String(Word[Iterate].c_str());
+		if (Words == "0")
+		{
+			String^ message = " No gameid to join";
+			String^ caption = "Join";
+			MessageBoxButtons buttons = MessageBoxButtons::OK;
+			System::Windows::Forms::DialogResult result;
+			result = MessageBox::Show(this, message, caption, buttons, MessageBoxIcon::Question, MessageBoxDefaultButton::Button1, MessageBoxOptions::RightAlign);
+			if (result == System::Windows::Forms::DialogResult::OK)
+			{
+				this->Controls->Clear();
+				choice();
+			}
+		}
+		else
+		{
+			this->Button3 = (gcnew System::Windows::Forms::Button());
+			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
+			Name = "label1";
+			Text = "Game Id";
+			set_label_properties(label1, Name, Text, 200, 100, 390, 110);
+			this->label1->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			image();
+
+　
+			this->comboBox2->Font = (gcnew System::Drawing::Font(L"Times New Roman", 12.25F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->comboBox2->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox2->FormattingEnabled = true;
+			Word = GameId[0].get_gameid();
+			for (Iterate = 0; Iterate < Word.size(); Iterate++)
+			{
+				System::String^ Words = gcnew String(Word[Iterate].c_str());
+				this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(1) { Words });
+			}
+			this->comboBox2->Location = System::Drawing::Point(200, 200);
+			this->comboBox2->Name = L"comboBox2";
+			this->comboBox2->Size = System::Drawing::Size(170, 30);
+			this->comboBox2->TabIndex = 33;
+			String^ Name="Button3";
+			String^ Text="Ok";
+			set_button_properties(Button3, Name, Text, 280, 450, 105, 36);
+			this->Button3->Click += gcnew System::EventHandler(this, &FormDesign::Button3_Click);
+			this->Controls->Add(this->comboBox2);
+			this->Controls->Add(this->label1);
+			this->Controls->Add(this->Button3);
+			this->Controls->Add(this->pictureBox1);
+			}
+	}
+void set_button_properties(Button^ Control,String^ Name,String^ Text,int LocationX,int LocationY,int Height,int Width)
+{
+	Control->Font = (gcnew System::Drawing::Font(L"Times New Roman", 12.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+		static_cast<System::Byte>(0)));
+	Control->BackColor = System::Drawing::SystemColors::ButtonShadow;
+	Control->ForeColor = System::Drawing::Color::White;
+	Control->Location = System::Drawing::Point(LocationX, LocationY);
+	Control->Name = Name;
+	Control->Size = System::Drawing::Size(Height, Width);
+	Control->TabIndex = 21;
+	Control->Text = Text;
+	Control->UseVisualStyleBackColor = false;
+}
+	#pragma endregion  
+private: System::Void FormDesign_Load(System::Object^  sender, System::EventArgs^  e)
+{
+}
+public: System::Void button1_Click(System::Object^ sender, System::EventArgs^  e) 
+{
+	if (this->textBox1->Text == "")
+	{
+	MessageBox::Show("Enter the name");
+	}
+	else
+	{
+	this->Controls->Clear();
+	this->display();
+	}
+}
+private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e)
+{
+	String^ message = " Do you want to exit ?";
+	String^ caption = "Exit hangman";
+	MessageBoxButtons buttons = MessageBoxButtons::YesNo;
+	System::Windows::Forms::DialogResult result;
+	result = MessageBox::Show(this, message, caption, buttons, MessageBoxIcon::Question, MessageBoxDefaultButton::Button1, MessageBoxOptions::RightAlign);
+	if (result == System::Windows::Forms::DialogResult::Yes)
+	{
+	this->Close();
+	}
+	else if (result == System::Windows::Forms::DialogResult::No)
+	{
+	Sleep(2000);
+	}
+}
+private: System::Void Button9_Click(System::Object^  sender, System::EventArgs^  e) 
+{
+
+}
+private: System::Void Button4_Click(System::Object^  sender, System::EventArgs^  e) 
+{
+	this->Controls->Clear();
+	display();
+}
+private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e)
+{
+	if (this->comboBox1->Text == "")
+	{
+	MessageBox::Show("Choose the category");
+
+	}
+	else 
+	{
+		this->Controls->Clear();
+		levels();
+	}
+}
+public: System::Void button7_Click(System::Object^  sender, System::EventArgs^  e) 
+{
+	if (this->radioButton7->Checked == false && this->radioButton8->Checked == false)
+	{
+	MessageBox::Show("Choose the choice");
+	}
+	else
+	{
+		if (this->radioButton7->Checked == true)
+		{
+
+			this->Controls->Clear();
+			choice();
+
+		}
+		else if (this->radioButton8->Checked == true)
+		{
+		
+			this->Controls->Clear();
+			instructions();
+
+		}
+	}
+}
+public: System::Void button8_Click(System::Object^  sender, System::EventArgs^  e) 
+{
+	System::String^ Name;
+	std::string UserName;
+	std::string Display;
+	if (this->radioButton9->Checked == false && this->radioButton10->Checked == false)
+	{
+	MessageBox::Show("Choose the choice");
+	}
+	else
+	{
+		if (this->radioButton9->Checked == true)
+		{
+			Name = textBox1->Text;
+			UserName = msclr::interop::marshal_as<std::string>(Name);
+			UserRequest::send_requestcreategame(UserName);
+			chance();
+			return;
+		}
+		else if (this->radioButton10->Checked == true)
+		{
+			Name = textBox1->Text;
+			UserName = msclr::interop::marshal_as<std::string>(Name);
+			UserRequest::send_requestjoingame(UserName);
+			chance();
+			return;			
+		}
+	}
+}
+public: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e)
+{
+System::String^ Category;
+std::string UserCategory;
+System::String^ Level;
+std::string UserLevel;
+	if (this->radioButton4->Checked == false && this->radioButton5->Checked == false && this->radioButton6->Checked == false)
+	{
+	MessageBox::Show("Choose the choice");
+	}
+	else
+	{
+		if (this->radioButton4->Checked == true)
+		{
+		Level = radioButton4->Text;
+		UserLevel = msclr::interop::marshal_as<std::string>(Level);
+		Category = comboBox1->Text;
+		UserCategory = msclr::interop::marshal_as<std::string>(Category);
+		UserRequest::useroption(UserCategory, UserLevel);
+		chance();
+		}
+		else if (this->radioButton5->Checked == true)
+		{
+		Level = radioButton5->Text;
+		UserLevel = msclr::interop::marshal_as<std::string>(Level);
+		Category = comboBox1->Text;
+		UserCategory = msclr::interop::marshal_as<std::string>(Category);
+		UserRequest::useroption(UserCategory, UserLevel);
+		chance();
+		}
+		else if (this->radioButton6->Checked == true)
+		{
+		Level = radioButton6->Text;
+		UserLevel = msclr::interop::marshal_as<std::string>(Level);
+		Category = comboBox1->Text;
+		UserCategory = msclr::interop::marshal_as<std::string>(Category);
+		UserRequest::useroption(UserCategory, UserLevel);
+		chance();
+		}
+	}
+
+　
+		return;
+}
+
+private: System::Void textBox4_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e)
+{
+	if (textBox4->Text->Length == textBox4->MaxLength)
+	{	
+		string UserGuess;
+		String^ Letter = textBox4->Text;
+		UserGuess = msclr::interop::marshal_as<std::string>(Letter);
+		UserRequest::user_input(UserGuess); 		
+		chance();
+	}
+	else if (textBox4->Text->Length > textBox4->MaxLength)
+	{
+		 MessageBox::Show("Input is greater than the length");
+	}
+}
+public: System::Void Button3_Click(System::Object^  sender, System::EventArgs^  e) 
+{
+	System::String ^ Choice;
+	std::string UserChoice;
+		if (this->comboBox2->Text == "")
+		{
+		MessageBox::Show("Choose the category");
+		}
+		else
+		{
+		Choice = comboBox2->Text;
+		UserChoice = msclr::interop::marshal_as<std::string>(Choice);
+		UserRequest::usergameid(UserChoice);
+		chance();
+		return;
+		}
+}			
+void join_game(vector<GameData> GameId)
+{
+	
+	std::string UserChoice;
+	this->Controls->Clear();
+	game_id(GameId);
+}
+void creategame(vector<GameData> Categories)
+{
+	System::String^ Category;
+	std::string UserCategory;
+	this->Controls->Clear();
+	categories(Categories);
+	Category = comboBox1->Text;
+	UserCategory = msclr::interop::marshal_as<std::string>(Category);
+}
+void game_info(vector<GameData> gameinfo)
+{
+	this->Controls->Clear();
+	game(gameinfo);
+}
+void chance()
+{
+	string Information;
+	char option[1024];
+	vector<GameData> details;
+	string value;
+	Information = UserRequest::receive();
+	strcpy_s(option, Information.c_str());
+	details = UserRequest::request_parse(Information);
+	value = UserRequest::receive_data(Information);
+	if (value == JOIN)
+	{
+		join_game(details);
+	}
+	else if (value == CATEGORYLIST)
+	{
+		creategame(details);
+	}
+	else if (value == GAMEINFO)
+	{
+		game_info(details);
+	}
+}
+private: System::Void textBox4_Entered(System::Object^  sender, System::EventArgs^  e)
+{
+		chance();
+}
+private: System::Void textBox4_MouseMove(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e)
+{
+	chance();
+}
+};
+}
